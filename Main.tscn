@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://assets/Background_Blue.png" type="Texture" id=1]
 [ext_resource path="res://Main.gd" type="Script" id=2]
+[ext_resource path="res://assets/side.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 205.5, 4 )
@@ -25,3 +26,8 @@ __meta__ = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
 position = Vector2( 0.5, 0 )
 shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="Floor"]
+position = Vector2( 21, 18 )
+scale = Vector2( 0.641193, 0.14018 )
+texture = ExtResource( 3 )
