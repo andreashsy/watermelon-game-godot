@@ -31,3 +31,35 @@ shape = SubResource( 1 )
 position = Vector2( 21, 18 )
 scale = Vector2( 0.641193, 0.14018 )
 texture = ExtResource( 3 )
+
+[node name="LeftWall" type="StaticBody2D" parent="."]
+position = Vector2( 457, 480 )
+rotation = 1.5708
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftWall"]
+position = Vector2( 0.5, 0 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="LeftWall"]
+position = Vector2( 21, 18 )
+scale = Vector2( 0.641193, 0.14018 )
+texture = ExtResource( 3 )
+
+[node name="RightWall" type="StaticBody2D" parent="."]
+position = Vector2( 859, 480 )
+rotation = 1.5708
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightWall"]
+position = Vector2( 0.5, 0 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="RightWall"]
+position = Vector2( 21, 18 )
+scale = Vector2( 0.641193, 0.14018 )
+texture = ExtResource( 3 )
