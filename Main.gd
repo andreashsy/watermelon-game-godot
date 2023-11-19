@@ -38,7 +38,7 @@ func merge_children(body1, body2):
 		var new_instance = purple_smiley.instance()
 		new_instance.position = new_pos
 		print(str(new_instance) + " created at " + str(new_pos))
-		add_child(new_instance)
+		call_deferred("add_child", new_instance)
 
 func _physics_process(_delta):
 	pass
