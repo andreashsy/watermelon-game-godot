@@ -1,6 +1,6 @@
 extends Node2D
 
-var circle = preload("res://Circle.tscn")
+var circle = preload("res://YellowSmileyFace.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
