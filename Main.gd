@@ -4,7 +4,8 @@ var circle = preload("res://YellowSmileyFace.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	generate_random(400, 800, circle, 20, 0.5)
+	#generate_random(400, 800, circle, 20, 0.5)
+	pass
 
 func generate_random(x_min: int, x_max: int, obj, num_times: int, delay: float):
 	randomize()
