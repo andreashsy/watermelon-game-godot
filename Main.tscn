@@ -69,6 +69,8 @@ texture = ExtResource( 3 )
 
 [node name="Cloud" type="RigidBody2D" parent="."]
 position = Vector2( 543, 180 )
+collision_layer = 2
+collision_mask = 2
 gravity_scale = 0.0
 __meta__ = {
 "_edit_group_": true
