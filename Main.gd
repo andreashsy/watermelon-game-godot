@@ -13,7 +13,7 @@ func generate_random(x_min: int, x_max: int, obj, num_times: int, delay: float):
 		yield(wait(delay), "completed")
 		
 		var obj_instance = obj.instance()
-		obj_instance.position = Vector2(rand_range(x_min, x_max), 0)
+		obj_instance.position = Vector2(rand_range(x_min, x_max), 300)
 		
 		add_child(obj_instance)
 
