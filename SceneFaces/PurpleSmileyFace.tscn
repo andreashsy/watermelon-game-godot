@@ -23,3 +23,5 @@ texture = ExtResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2DPurpleSmileyFace"]
 scale = Vector2( 1.1, 1.1 )
 shape = SubResource( 1 )
+
+[connection signal="body_entered" from="RigidBody2DPurpleSmileyFace" to="." method="_on_RigidBody2DPurpleSmileyFace_body_entered"]

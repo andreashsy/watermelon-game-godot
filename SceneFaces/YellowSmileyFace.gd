@@ -7,14 +7,8 @@ signal merge(obj1, obj2)
 func _ready():
 	get_node("RigidBody2DYellowSmileyFace").contact_monitor = true
 	get_node("RigidBody2DYellowSmileyFace").contacts_reported = 20
-	self.connect("merge", self.get_parent().get_parent(), "merge_children")
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
-
+	var _unused = self.connect("merge", self.get_parent().get_parent(), "merge_children")
+ 
 func _on_RigidBody2DYellowSmileyFace_body_entered(body):
 	var other_rank = body.get_parent().RANK
 	#print(str(self.name) + " collided with " + str(body.name) + " of rank " + str(other_rank))
