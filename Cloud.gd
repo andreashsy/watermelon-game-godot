@@ -36,3 +36,7 @@ func _physics_process(delta):
 			
 			child_node.get_node("RigidBody2DYellowSmileyFace").mode = RigidBody2D.MODE_RIGID
 			child_node.position = position
+
+
+
+

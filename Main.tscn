@@ -71,16 +71,16 @@ texture = ExtResource( 3 )
 
 [node name="Cloud" type="KinematicBody2D" parent="."]
 position = Vector2( 537, 204 )
-collision_layer = 2
-collision_mask = 2
+collision_layer = 32768
+collision_mask = 32768
 script = ExtResource( 5 )
 __meta__ = {
 "_edit_group_": true
 }
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cloud"]
+shape = SubResource( 2 )
+
 [node name="Sprite" type="Sprite" parent="Cloud"]
 scale = Vector2( 0.347545, 0.348958 )
 texture = ExtResource( 4 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cloud"]
-shape = SubResource( 2 )
