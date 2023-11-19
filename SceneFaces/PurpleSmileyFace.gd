@@ -1,6 +1,6 @@
 extends Node2D
 
-var RANK = 2
+var RANK = 9
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

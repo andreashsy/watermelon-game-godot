@@ -1,7 +1,8 @@
 extends Node2D
 
-var yellow_smiley = preload("res://YellowSmileyFace.tscn")
-var purple_smiley = preload("res://PurpleSmileyFace.tscn")
+var yellow_smiley = preload("res://SceneFaces/YellowSmileyFace.tscn")
+var purple_smiley = preload("res://SceneFaces/PurpleSmileyFace.tscn")
+var blue_smiley = preload("res://SceneFaces/BlueSmileyFace.tscn")
 var RANK = 0
 var merged_nodes = {}
 

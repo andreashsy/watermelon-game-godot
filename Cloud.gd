@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-var circle = preload("res://YellowSmileyFace.tscn")
+var circle = preload("res://SceneFaces/YellowSmileyFace.tscn")
 var velocity = Vector2.ZERO
 
 # Called when the node enters the scene tree for the first time.
