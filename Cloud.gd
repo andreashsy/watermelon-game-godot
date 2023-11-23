@@ -19,24 +19,27 @@ func _physics_process(delta):
 	position.x = clamp(position.x, 500, 850)
 	
 	if Input.is_action_just_pressed("ui_up"):
-		if get_child_count() == 2:
-			var obj_instance = circle.instance()
-			obj_instance.get_node("RigidBody2DYellowSmileyFace").mode = RigidBody2D.MODE_STATIC
-			add_child(obj_instance)
+		generate_circle()
 			
 	if Input.is_action_just_pressed("ui_down"):
-		var children = get_children()
-		var isLastElementNode2D = children.back().get_class() == "Node2D"
-		if isLastElementNode2D:
-			var child_node = children.back()
-			var grandparent_node = get_parent()
-			
-			remove_child(child_node)
-			grandparent_node.add_child(child_node)
-			
-			child_node.get_node("RigidBody2DYellowSmileyFace").mode = RigidBody2D.MODE_RIGID
-			child_node.position = position
+		release_circle()
 
 
+func generate_circle():
+	if get_child_count() == 2:
+		var obj_instance = circle.instance()
+		obj_instance.get_node("RigidBody2DYellowSmileyFace").mode = RigidBody2D.MODE_STATIC
+		add_child(obj_instance)
 
-
+func release_circle():
+	var children = get_children()
+	var isLastElementNode2D = children.back().get_class() == "Node2D"
+	if isLastElementNode2D:
+		var child_node = children.back()
+		var grandparent_node = get_parent()
+		
+		remove_child(child_node)
+		grandparent_node.add_child(child_node)
+		
+		child_node.get_node("RigidBody2DYellowSmileyFace").mode = RigidBody2D.MODE_RIGID
+		child_node.position = position
