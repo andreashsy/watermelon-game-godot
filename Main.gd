@@ -55,3 +55,11 @@ func merge_children(body1, body2):
 
 func _physics_process(_delta):
 	pass
+	
+func _on_TimerActivateNoTouchZone_timeout():
+	print('Reactivating NTZ...')
+	$NoTouchZone.monitoring = true
+
+func _on_NoTouchZone_body_entered(_body:Node):
+	print("Game over")
+	$Cloud.queue_free()

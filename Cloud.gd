@@ -40,6 +40,9 @@ func release_circle():
 		
 		remove_child(child_node)
 		grandparent_node.add_child(child_node)
-		
+
+		grandparent_node.get_node("NoTouchZone").monitoring = false
+		grandparent_node.get_node("TimerActivateNoTouchZone").start()
+
 		child_node.get_node("RigidBody2D").mode = RigidBody2D.MODE_RIGID
 		child_node.position = position
