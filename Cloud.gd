@@ -28,7 +28,7 @@ func _physics_process(delta):
 func generate_circle():
 	if get_child_count() == 2:
 		var obj_instance = circle.instance()
-		obj_instance.get_node("RigidBody2DYellowSmileyFace").mode = RigidBody2D.MODE_STATIC
+		obj_instance.get_node("RigidBody2D").mode = RigidBody2D.MODE_STATIC
 		add_child(obj_instance)
 
 func release_circle():
@@ -41,5 +41,5 @@ func release_circle():
 		remove_child(child_node)
 		grandparent_node.add_child(child_node)
 		
-		child_node.get_node("RigidBody2DYellowSmileyFace").mode = RigidBody2D.MODE_RIGID
+		child_node.get_node("RigidBody2D").mode = RigidBody2D.MODE_RIGID
 		child_node.position = position

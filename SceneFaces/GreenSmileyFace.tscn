@@ -9,19 +9,19 @@ radius = 31.0644
 [node name="GreenSmileyFace" type="Node2D"]
 script = ExtResource( 1 )
 
-[node name="RigidBody2DGreenSmileyFace" type="RigidBody2D" parent="."]
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
 gravity_scale = 8.0
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Sprite" type="Sprite" parent="RigidBody2DGreenSmileyFace"]
+[node name="Sprite" type="Sprite" parent="RigidBody2D"]
 position = Vector2( -3.03984e-06, 9.53674e-07 )
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 2 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2DGreenSmileyFace"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
 scale = Vector2( 1.2, 1.2 )
 shape = SubResource( 1 )
 
-[connection signal="body_entered" from="RigidBody2DGreenSmileyFace" to="." method="_on_RigidBody2DGreenSmileyFace_body_entered"]
+[connection signal="body_entered" from="RigidBody2D" to="." method="_on_RigidBody2DGreenSmileyFace_body_entered"]
