@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-var circle = preload("res://SceneFaces/YellowSmileyFace.tscn")
+var golf = preload("res://BallScenes/GolfBall.tscn")
 var velocity = Vector2.ZERO
 
 # Called when the node enters the scene tree for the first time.
@@ -27,7 +27,7 @@ func _physics_process(delta):
 
 func generate_circle():
 	if get_child_count() == 2:
-		var obj_instance = circle.instance()
+		var obj_instance = golf.instance()
 		obj_instance.get_node("RigidBody2D").mode = RigidBody2D.MODE_STATIC
 		add_child(obj_instance)
 

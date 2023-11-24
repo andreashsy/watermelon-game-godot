@@ -1,21 +1,18 @@
 extends Node2D
 
-var yellow_smiley = preload("res://SceneFaces/YellowSmileyFace.tscn")
-var purple_smiley = preload("res://SceneFaces/PurpleSmileyFace.tscn")
-var blue_smiley = preload("res://SceneFaces/BlueSmileyFace.tscn")
-var green_smiley = preload("res://SceneFaces/GreenSmileyFace.tscn")
-var red_smiley = preload("res://SceneFaces/RedSmileyFace.tscn")
+var golf = preload("res://BallScenes/GolfBall.tscn")
+
 var RANK = 0
 var merged_nodes = {}
 var score = 0
 
-var smiley_map = {
-	8: yellow_smiley,
-	9: purple_smiley,
-	10: green_smiley,
-	11: blue_smiley,
-	12: red_smiley
-}
+# var smiley_map = {
+# 	8: yellow_smiley,
+# 	9: purple_smiley,
+# 	10: green_smiley,
+# 	11: blue_smiley,
+# 	12: red_smiley
+# }
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -51,11 +48,11 @@ func merge_children(body1, body2):
 		body1.queue_free()
 		body2.queue_free()
 		
-		if smiley_map.has(new_rank):
-			var new_instance = smiley_map[new_rank].instance()
-			new_instance.position = new_pos
-			print(str(new_instance) + " created at " + str(new_pos))
-			call_deferred("add_child", new_instance)
+		# if smiley_map.has(new_rank):
+		# 	var new_instance = smiley_map[new_rank].instance()
+		# 	new_instance.position = new_pos
+		# 	print(str(new_instance) + " created at " + str(new_pos))
+		# 	call_deferred("add_child", new_instance)
 
 func _physics_process(_delta):
 	pass
