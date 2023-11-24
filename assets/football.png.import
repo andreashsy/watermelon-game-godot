@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/blue_smile.png-a66f907cd817835d6d8a1a63b2146dd9.stex"
+path="res://.import/football.png-e37d7f8226e4119f817b28e0d848d881.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/blue_smile.png"
-dest_files=[ "res://.import/blue_smile.png-a66f907cd817835d6d8a1a63b2146dd9.stex" ]
+source_file="res://assets/football.png"
+dest_files=[ "res://.import/football.png-e37d7f8226e4119f817b28e0d848d881.stex" ]
 
 [params]
 

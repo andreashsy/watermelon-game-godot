@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/black_smile_big.png-0e036ff9190cc687abf3e28072000a6e.stex"
+path="res://.import/basketball.png-a70516e21b58228437f7f0e114170130.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/black_smile_big.png"
-dest_files=[ "res://.import/black_smile_big.png-0e036ff9190cc687abf3e28072000a6e.stex" ]
+source_file="res://assets/basketball.png"
+dest_files=[ "res://.import/basketball.png-a70516e21b58228437f7f0e114170130.stex" ]
 
 [params]
 

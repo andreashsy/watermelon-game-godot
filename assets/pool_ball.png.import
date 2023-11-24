@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/red_smile_big.png-68a879d8ca7ddbcb8dff9beb82acf6cf.stex"
+path="res://.import/pool_ball.png-90165916aa186779273eba3929dca2c2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/red_smile_big.png"
-dest_files=[ "res://.import/red_smile_big.png-68a879d8ca7ddbcb8dff9beb82acf6cf.stex" ]
+source_file="res://assets/pool_ball.png"
+dest_files=[ "res://.import/pool_ball.png-90165916aa186779273eba3929dca2c2.stex" ]
 
 [params]
 

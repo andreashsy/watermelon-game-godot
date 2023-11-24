@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/yellow_smile_big.png-44f04072bdcd4f79b1c85610c699c4d0.stex"
+path="res://.import/bowling_ball.png-1d1a08a7745e2b59662d12a9d820bfa8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/yellow_smile_big.png"
-dest_files=[ "res://.import/yellow_smile_big.png-44f04072bdcd4f79b1c85610c699c4d0.stex" ]
+source_file="res://assets/bowling_ball.png"
+dest_files=[ "res://.import/bowling_ball.png-1d1a08a7745e2b59662d12a9d820bfa8.stex" ]
 
 [params]
 

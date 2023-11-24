@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/red_smile.png-282a7fdd0141e4697c945bf8e1d5fdee.stex"
+path="res://.import/handball.png-8ba4adde36c748dcf76706f6e7d8a74b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/red_smile.png"
-dest_files=[ "res://.import/red_smile.png-282a7fdd0141e4697c945bf8e1d5fdee.stex" ]
+source_file="res://assets/handball.png"
+dest_files=[ "res://.import/handball.png-8ba4adde36c748dcf76706f6e7d8a74b.stex" ]
 
 [params]
 
