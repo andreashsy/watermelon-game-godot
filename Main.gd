@@ -3,6 +3,8 @@ extends Node2D
 var golf = preload("res://BallScenes/GolfBall.tscn")
 var tennis = preload("res://BallScenes/TennisBall.tscn")
 var pool = preload("res://BallScenes/PoolBall.tscn")
+var base = preload("res://BallScenes/BaseBall.tscn")
+var hand = preload("res://BallScenes/HandBall.tscn")
 
 var RANK = 0
 var merged_nodes = {}
@@ -11,7 +13,9 @@ var score = 0
 var ball_map = {
 	1: golf,
 	2: tennis,
-	3: pool
+	3: pool,
+	4: base,
+	5: hand,
 }
 
 # Called when the node enters the scene tree for the first time.
