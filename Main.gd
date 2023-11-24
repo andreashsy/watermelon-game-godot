@@ -7,6 +7,7 @@ var green_smiley = preload("res://SceneFaces/GreenSmileyFace.tscn")
 var red_smiley = preload("res://SceneFaces/RedSmileyFace.tscn")
 var RANK = 0
 var merged_nodes = {}
+var score = 0
 
 var smiley_map = {
 	8: yellow_smiley,
@@ -43,6 +44,9 @@ func merge_children(body1, body2):
 		
 		var new_rank = body1.RANK + 1
 		var new_pos = (body1.get_child(0).global_position + body2.get_child(0).global_position)/2
+
+		score += body1.RANK
+		$LabelScore.text = "SCORE: " + str(score)
 
 		body1.queue_free()
 		body2.queue_free()
