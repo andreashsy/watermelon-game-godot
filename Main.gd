@@ -64,3 +64,4 @@ func _on_TimerActivateNoTouchZone_timeout():
 func _on_NoTouchZone_body_entered(_body:Node):
 	print("Game over")
 	$Cloud.queue_free()
+	$TimerActivateNoTouchZone.stop()
