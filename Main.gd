@@ -1,18 +1,18 @@
 extends Node2D
 
 var golf = preload("res://BallScenes/GolfBall.tscn")
+var tennis = preload("res://BallScenes/TennisBall.tscn")
+var pool = preload("res://BallScenes/PoolBall.tscn")
 
 var RANK = 0
 var merged_nodes = {}
 var score = 0
 
-# var smiley_map = {
-# 	8: yellow_smiley,
-# 	9: purple_smiley,
-# 	10: green_smiley,
-# 	11: blue_smiley,
-# 	12: red_smiley
-# }
+var ball_map = {
+	1: golf,
+	2: tennis,
+	3: pool
+}
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -48,11 +48,11 @@ func merge_children(body1, body2):
 		body1.queue_free()
 		body2.queue_free()
 		
-		# if smiley_map.has(new_rank):
-		# 	var new_instance = smiley_map[new_rank].instance()
-		# 	new_instance.position = new_pos
-		# 	print(str(new_instance) + " created at " + str(new_pos))
-		# 	call_deferred("add_child", new_instance)
+		if ball_map.has(new_rank):
+			var new_instance = ball_map[new_rank].instance()
+			new_instance.position = new_pos
+			print(str(new_instance) + " created at " + str(new_pos))
+			call_deferred("add_child", new_instance)
 
 func _physics_process(_delta):
 	pass
