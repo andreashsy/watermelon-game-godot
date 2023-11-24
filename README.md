@@ -7,6 +7,7 @@ Developed in Godot v3.5.3
 
 Gain the highest score by merging the balls.   
 Game will end if the container overflows.   
+Left/Right arrow keys to move the cloud, down to drop ball   
 
 ### How to run
 
