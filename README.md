@@ -11,6 +11,8 @@ Left/Right arrow keys to move the cloud, down to drop ball.
 
 ### How to run
 
+Would be safer to clone this repo and run in Godot engine, but if you are on Windows and are ok with running an executable from me, there is a download link below.
+
 **Windows**    
 Check under releases for the latest executable ([Alpha prototype](https://github.com/andreashsy/watermelon-game-godot/releases/download/v0.1.0-alpha/watermelon-game-v0-1-0.exe)).   
 
