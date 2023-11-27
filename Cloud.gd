@@ -25,7 +25,7 @@ func _physics_process(delta):
 		generate_ball()
 			
 	if Input.is_action_just_pressed("ui_down"):
-		release_circle()
+		release_ball()
 
 
 func generate_ball():
@@ -38,7 +38,7 @@ func generate_ball():
 		obj_instance.get_node("RigidBody2D").mode = RigidBody2D.MODE_STATIC
 		add_child(obj_instance)
 
-func release_circle():
+func release_ball():
 	var children = get_children()
 	var isLastElementNode2D = children.back().get_class() == "Node2D"
 	if isLastElementNode2D:
