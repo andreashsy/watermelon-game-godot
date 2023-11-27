@@ -24,10 +24,10 @@ Check under releases for the latest executable ([Alpha prototype](https://github
 
 **TODOS**
  - Show next ball
- - Spawn next ball when released ball touches wall/another ball
- - Fix bouncing when ball hits floor
+ - Spawn next ball when released ball touches wall/another ball instead of based on timer
+ - Fix bouncing down when ball hits floor
  - Fix ball merging popping up when new ball is much larger
- - Fix balls not sliding when another falls between
+ - Fix balls not sliding properly when another falls between
  - Find better way to handle No Touch Zone/Game over
  - Add line to show where ball will land
  - Better ball position on cloud
