@@ -19,3 +19,20 @@ Check under releases for the latest executable ([Alpha prototype](https://github
 1) Download Godot Engine v3.5.3
 2) Clone and open this repo in Godot
 3) Click play (F5)
+
+**TODOS**
+ - Show next ball
+ - Spawn next ball when released ball touches wall/another ball
+ - Fix bouncing when ball hits floor
+ - Fix ball merging popping up when new ball is much larger
+ - Fix balls not sliding when another falls between
+ - Find better way to handle No Touch Zone/Game over
+ - Add line to show where ball will land
+ - Better ball position on cloud
+ - Better logic for handling cloud edge 
+ - Create UI
+ - Find music
+ - Find better graphics
+ - Create ability to restart game
+ - Show ball hierarchy on UI
+ - Others?
