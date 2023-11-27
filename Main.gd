@@ -72,7 +72,7 @@ func _physics_process(_delta):
 func _on_TimerActivateNoTouchZone_timeout():
 	print('Reactivating NTZ...')
 	$NoTouchZone.monitoring = true
-	$Cloud.generate_circle()
+	$Cloud.generate_ball()
 
 func _on_NoTouchZone_body_entered(_body:Node):
 	print("Game over")

@@ -1,6 +1,9 @@
 extends KinematicBody2D
 
 var golf = preload("res://BallScenes/GolfBall.tscn")
+var tennis = preload("res://BallScenes/TennisBall.tscn")
+var pool = preload("res://BallScenes/PoolBall.tscn")
+var base = preload("res://BallScenes/BaseBall.tscn")
 var velocity = Vector2.ZERO
 
 # Called when the node enters the scene tree for the first time.
@@ -19,15 +22,19 @@ func _physics_process(delta):
 	position.x = clamp(position.x, 500, 850)
 	
 	if Input.is_action_just_pressed("ui_up"):
-		generate_circle()
+		generate_ball()
 			
 	if Input.is_action_just_pressed("ui_down"):
 		release_circle()
 
 
-func generate_circle():
+func generate_ball():
 	if get_child_count() == 2:
-		var obj_instance = golf.instance()
+		randomize()
+		var balls = [golf, tennis, pool, base]
+		var random_ball = balls[randi()%balls.size()]
+
+		var obj_instance = random_ball.instance()
 		obj_instance.get_node("RigidBody2D").mode = RigidBody2D.MODE_STATIC
 		add_child(obj_instance)
 
