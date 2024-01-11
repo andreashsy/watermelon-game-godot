@@ -21,10 +21,10 @@ jobs:
       - run: zip -r ../html5.zip ../export/*
       - run: ls -l ..
 
-      - run: wget -P .. -O butler.zip https://broth.itch.ovh/butler/linux-amd64/LATEST/archive/default
-      - run: ls -l
+      - run: wget -O ../butler.zip https://broth.itch.ovh/butler/linux-amd64/LATEST/archive/default
+      - run: ls -l ..
 
-      - run: unzip ../butler.zip
+      - run: unzip ../butler.zip -d ..
       - run: mv ../butler /usr/local/bin/butler
 
       - run: butler -V
