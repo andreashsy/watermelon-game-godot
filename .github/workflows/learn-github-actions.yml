@@ -14,4 +14,5 @@ jobs:
       - run: wget -P .. https://github.com/godotengine/godot/releases/download/3.5.3-stable/Godot_v3.5.3-stable_x11.64.zip
       - run: unzip ../Godot_v3.5.3-stable_x11.64.zip -d ..
       - run: ls -l ..
-      # - run: pwd
+      - run: ../Godot_v3.5.3-stable_x11.64 export HTML5 .
+      - run: ls -l
