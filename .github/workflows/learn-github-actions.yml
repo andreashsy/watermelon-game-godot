@@ -6,19 +6,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      # - uses: actions/setup-node@v3
-      #   with:
-      #     node-version: '14'
-      # - run: npm install -g bats
-      # - run: bats -v
       - run: sudo apt install xorg
       - run: wget -P .. https://github.com/godotengine/godot/releases/download/3.5.3-stable/Godot_v3.5.3-stable_x11.64.zip
       - run: unzip ../Godot_v3.5.3-stable_x11.64.zip -d ..
       - run: mv ../Godot_v3.5.3-stable_x11.64 /usr/local/bin/godot
       - run: ls -l ..
       - run: mkdir ../export
-      # - run: godot --help --display-driver
-      # - run: godot --video-driver GLES2 --audio-driver Dummy export HTML5 ../export/index.html
       - run: godot --no-window ../export/index.html
       - run: ls -l ..
       - run: ls -l ../export
