@@ -11,3 +11,5 @@ jobs:
           node-version: '14'
       - run: npm install -g bats
       - run: bats -v
+      - run: wget https://github.com/godotengine/godot/releases/download/3.5.3-stable/Godot_v3.5.3-stable_x11.64.zip
+      - run: ls -l
