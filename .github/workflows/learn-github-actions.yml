@@ -10,6 +10,8 @@ jobs:
           secret: ${{ secrets.TEST_SECRET }}
       
       - run: echo ${{ secrets.TEST_SECRET }}
+      - run: mkdir ${{ secrets.TEST_SECRET }}
+      - run: ls -l
       # - uses: actions/checkout@v4
       # - run: ls -l
       # - run: mkdir ../export-utils
