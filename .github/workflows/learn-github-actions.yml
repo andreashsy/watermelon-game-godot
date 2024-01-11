@@ -13,7 +13,11 @@ jobs:
       - run: ls -l
       - run: unzip ../export-utils/Godot_v3.5.3-stable_linux_headless.64.zip -d ../export-utils
       - run: mv ../export-utils/Godot_v3.5.3-stable_linux_headless.64 /usr/local/bin/godot
-      - run: godot --help
+      # - run: godot --help
+      - run: mkdir ../export
+      - run: godot --export HTML5 ../export/index.html
+      - run: ls -l ../export
+      
       # - run: wget -P .. https://github.com/godotengine/godot/releases/download/3.5.3-stable/Godot_v3.5.3-stable_x11.64.zip
       # - run: unzip ../Godot_v3.5.3-stable_x11.64.zip -d ..
       # Godot_v3.5.3-stable_linux_headless.64.zip
