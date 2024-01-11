@@ -6,9 +6,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: pwd
-        env:
-          secret: ${{ secrets.TEST_SECRET }}
-      
       - run: echo ${{ secrets.TEST_SECRET }}
       - run: mkdir ${{ secrets.TEST_SECRET }}
       - run: ls -l
