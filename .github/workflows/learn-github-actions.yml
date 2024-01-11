@@ -2,13 +2,10 @@ name: learn-github-actions
 run-name: ${{ github.actor }} is learning GitHub Actions
 on: [push]
 jobs:
-  check-bats-version:
+  deploy-itch:
     runs-on: ubuntu-latest
+    environment: itch
     steps:
-      # - run: pwd
-      # - run: echo ${{ secrets.TEST_SECRET }}
-      # - run: mkdir ${{ secrets.TEST_SECRET }}
-      # - run: ls -l
       - uses: actions/checkout@v4
       - run: ls -l
       - run: mkdir ../export-utils
@@ -32,5 +29,4 @@ jobs:
       - run: mv ../butler /usr/local/bin/butler
 
       - run: butler -V
-      - run: export BUTLER_API_KEY=${{ secrets.BUTLER_API_KEY }}
       - run: butler login
