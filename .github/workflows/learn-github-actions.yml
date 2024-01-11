@@ -6,12 +6,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: sudo apt install xorg
-      - run: wget -P .. https://github.com/godotengine/godot/releases/download/3.5.3-stable/Godot_v3.5.3-stable_x11.64.zip
-      - run: unzip ../Godot_v3.5.3-stable_x11.64.zip -d ..
-      - run: mv ../Godot_v3.5.3-stable_x11.64 /usr/local/bin/godot
-      - run: ls -l ..
+      - run: ls -l
+      - run: mkdir ../export-utils
+      - run: mv export/* ../export-utils
+      - run: rmdir export
+      - run: ls -l
+      - run: unzip ../export-utils/Godot_v3.5.3-stable_linux_headless.64.zip -d ../export-utils
+      - run: mv ../export-utils/Godot_v3.5.3-stable_linux_headless.64 /usr/local/bin/godot
+      # - run: godot --help
       - run: mkdir ../export
-      - run: godot --no-window ../export/index.html
-      - run: ls -l ..
+      - run: godot --export HTML5 ../export/index.html
       - run: ls -l ../export
+      
+      # - run: wget -P .. https://github.com/godotengine/godot/releases/download/3.5.3-stable/Godot_v3.5.3-stable_x11.64.zip
+      # - run: unzip ../Godot_v3.5.3-stable_x11.64.zip -d ..
+      # Godot_v3.5.3-stable_linux_headless.64.zip
+      # - run: mv ../Godot_v3.5.3-stable_x11.64 /usr/local/bin/godot
+      # - run: ls -l ..
+      # - run: mkdir ../export
+      # - run: godot --no-window ../export/index.html
+      # - run: ls -l ..
+      # - run: ls -l ../export
