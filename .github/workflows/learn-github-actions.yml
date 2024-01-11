@@ -5,10 +5,10 @@ jobs:
   check-bats-version:
     runs-on: ubuntu-latest
     steps:
-      - name: test secret
+      - run: pwd
         env:
           secret: ${{ secrets.TEST_SECRET }}
-      - run: pwd
+      
       - run: echo $TEST_SECRET
       # - uses: actions/checkout@v4
       # - run: ls -l
