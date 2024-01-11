@@ -9,7 +9,7 @@ jobs:
         env:
           secret: ${{ secrets.TEST_SECRET }}
       
-      - run: echo $TEST_SECRET
+      - run: echo ${{ secrets.TEST_SECRET }}
       # - uses: actions/checkout@v4
       # - run: ls -l
       # - run: mkdir ../export-utils
