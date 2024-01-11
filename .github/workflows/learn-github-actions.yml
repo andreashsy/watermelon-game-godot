@@ -19,7 +19,7 @@ jobs:
       - run: godot --export HTML5 ../export/index.html
       - run: ls -l ../export
       
-      - run: zip -r ../html5.zip ../export/*
+      - run: zip ../html5.zip ../export/*
       - run: ls -l ..
 
       - run: wget -O ../butler.zip https://broth.itch.ovh/butler/linux-amd64/LATEST/archive/default
