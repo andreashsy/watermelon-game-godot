@@ -5,26 +5,31 @@ jobs:
   check-bats-version:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - run: ls -l
-      - run: mkdir ../export-utils
-      - run: mv export/* ../export-utils
-      - run: rmdir export
-      - run: ls -l
-      - run: unzip ../export-utils/Godot_v3.5.3-stable_linux_headless.64.zip -d ../export-utils
-      - run: mv ../export-utils/Godot_v3.5.3-stable_linux_headless.64 /usr/local/bin/godot
-      # - run: godot --help
-      - run: mkdir ../export
-      - run: godot --export HTML5 ../export/index.html
-      - run: ls -l ../export
+      - name: test secret
+        env:
+          secret: ${{ secrets.TEST_SECRET }}
+      - run: pwd
+      - run: echo $TEST_SECRET
+      # - uses: actions/checkout@v4
+      # - run: ls -l
+      # - run: mkdir ../export-utils
+      # - run: mv export/* ../export-utils
+      # - run: rmdir export
+      # - run: ls -l
+      # - run: unzip ../export-utils/Godot_v3.5.3-stable_linux_headless.64.zip -d ../export-utils
+      # - run: mv ../export-utils/Godot_v3.5.3-stable_linux_headless.64 /usr/local/bin/godot
+      # # - run: godot --help
+      # - run: mkdir ../export
+      # - run: godot --export HTML5 ../export/index.html
+      # - run: ls -l ../export
       
-      - run: zip -r ../html5.zip ../export/*
-      - run: ls -l ..
+      # - run: zip -r ../html5.zip ../export/*
+      # - run: ls -l ..
 
-      - run: wget -O ../butler.zip https://broth.itch.ovh/butler/linux-amd64/LATEST/archive/default
-      - run: ls -l ..
+      # - run: wget -O ../butler.zip https://broth.itch.ovh/butler/linux-amd64/LATEST/archive/default
+      # - run: ls -l ..
 
-      - run: unzip ../butler.zip -d ..
-      - run: mv ../butler /usr/local/bin/butler
+      # - run: unzip ../butler.zip -d ..
+      # - run: mv ../butler /usr/local/bin/butler
 
-      - run: butler -V
+      # - run: butler -V
