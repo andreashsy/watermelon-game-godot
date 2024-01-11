@@ -18,12 +18,13 @@ jobs:
       - run: godot --export HTML5 ../export/index.html
       - run: ls -l ../export
       
-      # - run: wget -P .. https://github.com/godotengine/godot/releases/download/3.5.3-stable/Godot_v3.5.3-stable_x11.64.zip
-      # - run: unzip ../Godot_v3.5.3-stable_x11.64.zip -d ..
-      # Godot_v3.5.3-stable_linux_headless.64.zip
-      # - run: mv ../Godot_v3.5.3-stable_x11.64 /usr/local/bin/godot
-      # - run: ls -l ..
-      # - run: mkdir ../export
-      # - run: godot --no-window ../export/index.html
-      # - run: ls -l ..
-      # - run: ls -l ../export
+      - run: zip -r ../html5.zip ../export/*
+      - run: ls -l ..
+
+      - run: wget -P .. -O butler.zip https://broth.itch.ovh/butler/linux-amd64/LATEST/archive/default
+      - run: ls -l
+
+      - run: unzip ../butler.zip
+      - run: mv ../butler /usr/local/bin/butler
+
+      - run: butler -V
