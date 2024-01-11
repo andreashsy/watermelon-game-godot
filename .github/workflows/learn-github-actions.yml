@@ -6,11 +6,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '14'
-      - run: npm install -g bats
-      - run: bats -v
+      # - uses: actions/setup-node@v3
+      #   with:
+      #     node-version: '14'
+      # - run: npm install -g bats
+      # - run: bats -v
       # - run: wget -P .. https://github.com/godotengine/godot/releases/download/3.5.3-stable/Godot_v3.5.3-stable_x11.64.zip
+      - run: unzip ../Godot_v3.5.3-stable_x11.64.zip
       - run: ls -l ..
-      - run: pwd
+      # - run: pwd
