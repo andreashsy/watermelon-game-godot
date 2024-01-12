@@ -23,14 +23,11 @@ jobs:
       
       - run: mkdir export
       - run: godot --path main --export html5cicd ../export/index.html
-      - run: ls -l export
-      
       - run: zip -j html5.zip export/*
-      - run: ls -l 
 
       - run: butler login
         env:
           BUTLER_API_KEY: ${{ secrets.BUTLER_API_KEY }}
-      - run: butler push ../html5.zip andygame/watermelon-game:html5
+      - run: butler push html5.zip andygame/watermelon-game:html5
         env:
           BUTLER_API_KEY: ${{ secrets.BUTLER_API_KEY }}
