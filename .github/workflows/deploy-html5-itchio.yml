@@ -18,7 +18,7 @@ jobs:
           path: export-utils
       
       - name: Setup export tools
-      - run: |
+        run: |
           unzip export-utils/Godot_v3.5.3-stable_linux_headless.64.zip
           unzip export-utils/butler-linux-amd64.zip
           mv Godot_v3.5.3-stable_linux_headless.64 /usr/local/bin/godot
@@ -26,15 +26,15 @@ jobs:
           rm -f *7z*.so
 
       - name: Build html5
-      - run: |
+        run: |
           mkdir export
           godot --path main --export html5cicd ../export/index.html
           zip -j html5.zip export/*
 
       - name: Deploy
-      - run: |
-          butler login
-          butler push html5.zip andygame/watermelon-game:html5
         env:
           BUTLER_API_KEY: ${{ secrets.BUTLER_API_KEY }}
+        run: |
+          butler login
+          butler push html5.zip andygame/watermelon-game:html5
 
