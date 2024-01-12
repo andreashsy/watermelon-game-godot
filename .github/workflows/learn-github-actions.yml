@@ -24,7 +24,7 @@ jobs:
       - run: ls -l
       
       - run: mkdir export
-      - run: godot --path main --export html5-cicd export/index.html
+      - run: godot --path main --export html5cicd export/index.html
       - run: ls -l export
       
       - run: zip -j html5.zip export/*
