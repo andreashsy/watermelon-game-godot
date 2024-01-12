@@ -13,11 +13,14 @@ jobs:
         with: 
           repository: andreashsy/godot-export-tools
           path: export-utils
-      - run: ls -l      
+      - run: ls -l
+      - run: ls -l export-utils
+      - run: ls -l main
 
-      - run: unzip /export-utils/Godot_v3.5.3-stable_linux_headless.64.zip -d /export-utils
-      - run: mv /export-utils/Godot_v3.5.3-stable_linux_headless.64 /usr/local/bin/godot
-      - run: godot --help
+      # - run: unzip /export-utils/Godot_v3.5.3-stable_linux_headless.64.zip -d /export-utils
+      # - run: mv /export-utils/Godot_v3.5.3-stable_linux_headless.64 /usr/local/bin/godot
+      # - run: godot --help
+      
       # - run: mkdir ../export
       # - run: godot --export HTML5 ../export/index.html
       # - run: ls -l ../export
