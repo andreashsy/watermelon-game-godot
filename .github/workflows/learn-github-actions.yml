@@ -16,7 +16,6 @@ jobs:
 
       - run: unzip export-utils/Godot_v3.5.3-stable_linux_headless.64.zip
       - run: mv Godot_v3.5.3-stable_linux_headless.64 /usr/local/bin/godot
-      - run: godot --version
 
       - run: unzip export-utils/butler-linux-amd64.zip
       - run: mv butler-linux-amd64 /usr/local/bin/butler
