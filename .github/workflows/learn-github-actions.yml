@@ -20,11 +20,9 @@ jobs:
       - run: unzip export-utils/butler-linux-amd64.zip
       - run: mv butler /usr/local/bin/butler
       - run: rm -rf *7z*.so
-
-      - run: ls -l
       
       - run: mkdir export
-      - run: godot --path main --export html5cicd export/index.html
+      - run: godot --path main --export html5cicd ../export/index.html
       - run: ls -l export
       
       - run: zip -j html5.zip export/*
