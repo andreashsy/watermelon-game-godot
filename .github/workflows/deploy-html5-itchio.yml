@@ -1,17 +1,20 @@
 name: deploy-html5-itchio
 run-name: ${{ github.actor }} is deploying to itch.io
-on: [push]
+on: 
+  push: 
+    branches:
+      - main
 jobs:
   deploy-itch:
     runs-on: ubuntu-latest
     environment: itch
     steps:
-      - name: Checkout
+      - name: Checkout main repo
         uses: actions/checkout@v4
         with:
           path: main
       
-      - name: Checkout export tools
+      - name: Checkout export tools repo
         uses: actions/checkout@v4
         with: 
           repository: andreashsy/godot-export-tools
