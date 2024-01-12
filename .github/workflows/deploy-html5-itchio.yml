@@ -1,4 +1,4 @@
-name: learn-github-actions
+name: deploy-html5-itchio
 run-name: ${{ github.actor }} is deploying to itch.io
 on: [push]
 jobs:
