@@ -19,26 +19,20 @@ jobs:
 
       - run: unzip export-utils/butler-linux-amd64.zip
       - run: mv butler /usr/local/bin/butler
-      - run: butler --version
+      - run: rm -rf *7z*.so
 
       - run: ls -l
-      # - run: mkdir ../export
-      # - run: godot --export HTML5 ../export/index.html
-      # - run: ls -l ../export
       
-      # - run: zip -j ../html5.zip ../export/*
-      # - run: ls -l ..
+      - run: mkdir export
+      - run: godot --export html5-cicd export/index.html
+      - run: ls -l export
+      
+      - run: zip -j html5.zip export/*
+      - run: ls -l 
 
-      # - run: wget -O ../butler.zip https://broth.itch.ovh/butler/linux-amd64/LATEST/archive/default
-      # - run: ls -l ..
-
-      # - run: unzip ../butler.zip -d ..
-      # - run: mv ../butler /usr/local/bin/butler
-
-      # - run: butler -V
-      # - run: butler login
-      #   env:
-      #     BUTLER_API_KEY: ${{ secrets.BUTLER_API_KEY }}
-      # - run: butler push ../html5.zip andygame/watermelon-game:html5
-      #   env:
-      #     BUTLER_API_KEY: ${{ secrets.BUTLER_API_KEY }}
+      - run: butler login
+        env:
+          BUTLER_API_KEY: ${{ secrets.BUTLER_API_KEY }}
+      - run: butler push ../html5.zip andygame/watermelon-game:html5
+        env:
+          BUTLER_API_KEY: ${{ secrets.BUTLER_API_KEY }}
